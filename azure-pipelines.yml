@@ -25,6 +25,13 @@ steps:
 
 
 - script: |
+    workingDirectory: api
+    npm install
+    npm test
+  displayName: 'npm install test'
+
+- script: |
+    workingDirectory: client
     npm install
     npm test
   displayName: 'npm install test'
