@@ -24,14 +24,14 @@ steps:
   displayName: 'list directory and run a multi-line script'
 
 - script: |
-    workingDirectory: api
+    workingDirectory: /api
     dir
     npm install
     npm test
   displayName: 'npm install test in api'
 
 - script: |
-    workingDirectory: client
+    workingDirectory: /client
     dir
     npm install
     npm test
