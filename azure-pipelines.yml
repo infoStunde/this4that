@@ -31,7 +31,6 @@ steps:
   displayName: 'npm install test in api'
 
 - script: |
-    cd ..
     cd client
     dir
     npm install
