@@ -9,11 +9,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
-  displayName: 'Install node'
+#steps:
+#- task: NodeTool@0
+#  inputs:
+#    versionSpec: '8.x'
+#  displayName: 'Install node'
   
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -24,14 +24,15 @@ steps:
   displayName: 'list directory and run a multi-line script'
 
 - script: |
-    workingDirectory: /api
+    cd api
     dir
     npm install
     npm test
   displayName: 'npm install test in api'
 
 - script: |
-    workingDirectory: /client
+    cd ..
+    cd client
     dir
     npm install
     npm test
