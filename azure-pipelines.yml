@@ -19,19 +19,20 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
+    dir
     echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
+  displayName: 'list directory and run a multi-line script'
 
 - script: |
     workingDirectory: api
+    dir
     npm install
     npm test
-  displayName: 'npm install test'
+  displayName: 'npm install test in api'
 
 - script: |
     workingDirectory: client
+    dir
     npm install
     npm test
-  displayName: 'npm install test'
+  displayName: 'npm install test in client'
